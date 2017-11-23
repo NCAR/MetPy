@@ -164,7 +164,7 @@ And print the corresponding dewpoint
     11.376545231347285 degC 52.47778181642507 degF
 
 
-**Total running time of the script:** ( 0 minutes  0.003 seconds)
+**Total running time of the script:** ( 0 minutes  0.006 seconds)
 
 
 

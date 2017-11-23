@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>convergence_vorticity &mdash; MetPy 0.6</title>
+  <title>specific_humidity_from_mixing_ratio &mdash; MetPy 0.6</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.convergence_vorticity.html"/>
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.specific_humidity_from_mixing_ratio.html"/>
   
 
   
@@ -45,8 +45,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="MetPy 0.6" href="../../index.html"/>
         <link rel="up" title="calc" href="metpy.calc.html"/>
-        <link rel="next" title="coriolis_parameter" href="metpy.calc.coriolis_parameter.html"/>
-        <link rel="prev" title="cape_cin" href="metpy.calc.cape_cin.html"/> 
+        <link rel="next" title="storm_relative_helicity" href="metpy.calc.storm_relative_helicity.html"/>
+        <link rel="prev" title="significant_tornado" href="metpy.calc.significant_tornado.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -134,11 +134,11 @@
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.bulk_shear.html">bulk_shear</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.bunkers_storm_motion.html">bunkers_storm_motion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.cape_cin.html">cape_cin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">convergence_vorticity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.coriolis_parameter.html">coriolis_parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.density.html">density</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.dewpoint.html">dewpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.dewpoint_rh.html">dewpoint_rh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metpy.calc.divergence_vorticity.html">divergence_vorticity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.dry_lapse.html">dry_lapse</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.el.html">el</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.equivalent_potential_temperature.html">equivalent_potential_temperature</a></li>
@@ -152,7 +152,7 @@
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.get_wind_components.html">get_wind_components</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.get_wind_dir.html">get_wind_dir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.get_wind_speed.html">get_wind_speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="metpy.calc.h_convergence.html">h_convergence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metpy.calc.h_divergence.html">h_divergence</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.heat_index.html">heat_index</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.height_to_pressure_std.html">height_to_pressure_std</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.interp.html">interp</a></li>
@@ -188,6 +188,7 @@
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.shearing_stretching_deformation.html">shearing_stretching_deformation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.sigma_to_pressure.html">sigma_to_pressure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.significant_tornado.html">significant_tornado</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">specific_humidity_from_mixing_ratio</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.storm_relative_helicity.html">storm_relative_helicity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.stretching_deformation.html">stretching_deformation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="metpy.calc.supercell_composite.html">supercell_composite</a></li>
@@ -258,13 +259,13 @@
         
           <li><a href="metpy.calc.html">calc</a> &raquo;</li>
         
-      <li>convergence_vorticity</li>
+      <li>specific_humidity_from_mixing_ratio</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/metpy.calc.convergence_vorticity.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/metpy.calc.specific_humidity_from_mixing_ratio.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -277,43 +278,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="convergence-vorticity">
-<h1>convergence_vorticity<a class="headerlink" href="#convergence-vorticity" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="specific-humidity-from-mixing-ratio">
+<h1>specific_humidity_from_mixing_ratio<a class="headerlink" href="#specific-humidity-from-mixing-ratio" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="metpy.calc.convergence_vorticity">
-<code class="descclassname">metpy.calc.</code><code class="descname">convergence_vorticity</code><span class="sig-paren">(</span><em>u</em>, <em>v</em>, <em>dx</em>, <em>dy</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/calc/kinematics.html#convergence_vorticity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.calc.convergence_vorticity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the horizontal convergence and vertical vorticity of the horizontal wind.</p>
-<p>The grid must have a constant spacing in each direction.</p>
+<dt id="metpy.calc.specific_humidity_from_mixing_ratio">
+<code class="descclassname">metpy.calc.</code><code class="descname">specific_humidity_from_mixing_ratio</code><span class="sig-paren">(</span><em>mixing_ratio</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/metpy/calc/thermo.html#specific_humidity_from_mixing_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#metpy.calc.specific_humidity_from_mixing_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the specific humidity from the mixing ratio.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>u</strong> (<em>(</em><em>M</em><em>, </em><em>N</em><em>) </em><em>ndarray</em>) – x component of the wind</li>
-<li><strong>v</strong> (<em>(</em><em>M</em><em>, </em><em>N</em><em>) </em><em>ndarray</em>) – y component of the wind</li>
-<li><strong>dx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) – The grid spacing in the x-direction</li>
-<li><strong>dy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) – The grid spacing in the y-direction</li>
-<li><strong>dim_order</strong> (str or <code class="docutils literal"><span class="pre">None</span></code>, optional) – The ordering of dimensions in passed in arrays. Can be one of <code class="docutils literal"><span class="pre">None</span></code>, <code class="docutils literal"><span class="pre">'xy'</span></code>,
-or <code class="docutils literal"><span class="pre">'yx'</span></code>. <code class="docutils literal"><span class="pre">'xy'</span></code> indicates that the dimension corresponding to x is the leading
-dimension, followed by y. <code class="docutils literal"><span class="pre">'yx'</span></code> indicates that x is the last dimension, preceded
-by y. <code class="docutils literal"><span class="pre">None</span></code> indicates that the default ordering should be assumed,
-which will change in version 0.6 from ‘xy’ to ‘yx’. Can only be passed as a keyword
-argument, i.e. func(…, dim_order=’xy’).</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mixing_ratio</strong> (<em class="xref py py-obj">pint.Quantity</em>) – mixing ratio</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>convergence, vorticity</strong> (<em>tuple of (M, N) ndarrays</em>) – The horizontal convergence and vertical vorticity, respectively</p>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><em class="xref py py-obj">pint.Quantity</em> – Specific humidity</td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>Formula from <a class="reference internal" href="../../references.html#salby1996" id="id1">[Salby1996]</a> pg. 118.</p>
+<div class="math">
+\[q = \frac{w}{1+w}\]</div>
+<ul class="simple">
+<li><span class="math">\(w\)</span> is mixing ratio</li>
+<li><span class="math">\(q\)</span> is the specific humidity</li>
+</ul>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="metpy.calc.v_vorticity.html#metpy.calc.v_vorticity" title="metpy.calc.v_vorticity"><code class="xref py py-func docutils literal"><span class="pre">v_vorticity()</span></code></a>, <a class="reference internal" href="metpy.calc.h_convergence.html#metpy.calc.h_convergence" title="metpy.calc.h_convergence"><code class="xref py py-func docutils literal"><span class="pre">h_convergence()</span></code></a></p>
+<p class="last"><a class="reference internal" href="metpy.calc.mixing_ratio.html#metpy.calc.mixing_ratio" title="metpy.calc.mixing_ratio"><code class="xref py py-func docutils literal"><span class="pre">mixing_ratio()</span></code></a>, <a class="reference internal" href="metpy.calc.mixing_ratio_from_specific_humidity.html#metpy.calc.mixing_ratio_from_specific_humidity" title="metpy.calc.mixing_ratio_from_specific_humidity"><code class="xref py py-func docutils literal"><span class="pre">mixing_ratio_from_specific_humidity()</span></code></a></p>
 </div>
-<p class="rubric">Notes</p>
-<p>This is a convenience function that will do less work than calculating
-the horizontal convergence and vertical vorticity separately.</p>
 </dd></dl>
 
 <div style='clear:both'></div></div>
@@ -328,10 +320,10 @@ the horizontal convergence and vertical vorticity separately.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="metpy.calc.coriolis_parameter.html" class="btn btn-neutral float-right" title="coriolis_parameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="metpy.calc.storm_relative_helicity.html" class="btn btn-neutral float-right" title="storm_relative_helicity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="metpy.calc.cape_cin.html" class="btn btn-neutral" title="cape_cin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="metpy.calc.significant_tornado.html" class="btn btn-neutral" title="significant_tornado" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -341,7 +333,7 @@ the horizontal convergence and vertical vorticity separately.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, MetPy Developers.
-      Last updated on Nov 03, 2017 at 16:03:50.
+      Last updated on Nov 23, 2017 at 00:39:02.
 
     </p>
   </div>
@@ -379,7 +371,7 @@ the horizontal convergence and vertical vorticity separately.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.6.0+96.gd290880',
+            VERSION:'0.6.1+12.geed0fca',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

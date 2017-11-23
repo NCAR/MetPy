@@ -1,0 +1,12 @@
+h_divergence
+=======================
+
+.. currentmodule:: metpy.calc
+
+.. autofunction:: h_divergence
+
+.. include:: metpy.calc.h_divergence.examples
+
+.. raw:: html
+
+      <div style='clear:both'></div>

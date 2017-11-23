@@ -1,0 +1,12 @@
+divergence_vorticity
+===============================
+
+.. currentmodule:: metpy.calc
+
+.. autofunction:: divergence_vorticity
+
+.. include:: metpy.calc.divergence_vorticity.examples
+
+.. raw:: html
+
+      <div style='clear:both'></div>
